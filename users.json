@@ -1,0 +1,12 @@
+[
+    {
+        "id": "1",
+        "fullname": "Ivan",
+        "email": "icornejo@andrew.cmu.edu",
+        "password": "scrypt:32768:8:1$AZCjnsrRNAPqUFnM$6ba6b660c8a773dfc5fc4e36680cf528df8664ec99d4ecdaf3fbe4d954ba09f15c535730efb57131e7d7dd0956af902324128eb70d44d28236fb779aebe26987",
+        "college": "college1",
+        "age": 19,
+        "bio": "Founder of Sumus",
+        "profile_picture": "profile_icornejo_20250402_131659.png"
+    }
+]

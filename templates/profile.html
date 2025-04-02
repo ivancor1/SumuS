@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - SUMUS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <nav class="dashboard-nav">
+        <div class="nav-left">
+            <div class="logo"><a href="{{ url_for('dashboard') }}">SUMUS</a></div>
+        </div>
+        <div class="nav-right">
+            <div class="user-menu">
+                <span class="user-name">{{ user.fullname }}</span>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('profile') }}"><i class="fas fa-user"></i> Profile</a>
+                    <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
+                    <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <div class="profile-card">
+            <h2>Edit Profile</h2>
+            <form id="profileForm" class="profile-form" enctype="multipart/form-data">
+                <div class="profile-picture-section">
+                    <img src="{{ url_for('static', filename='uploads/' + (user.get('profile_picture', 'default.jpg')) ) }}" 
+                         alt="Profile Picture" 
+                         id="profilePreview"
+                         onerror="this.src='{{ url_for('static', filename='uploads/default.jpg') }}'">
+                    <div class="upload-btn-wrapper">
+                        <button type="button" class="btn">Change Picture</button>
+                        <input type="file" name="profile_picture" accept="image/*" id="profilePicture">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age (18+)</label>
+                    <input type="number" 
+                           id="age" 
+                           name="age" 
+                           min="18" 
+                           value="{{ user.age or '' }}" 
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <input type="text" 
+                           id="bio" 
+                           name="bio" 
+                           maxlength="160" 
+                           placeholder="Write a short bio..." 
+                           value="{{ user.bio }}"
+                           required>
+                </div>
+
+                <div class="error-message" id="errorMessage"></div>
+                <button type="submit" class="cta-button">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+</body>
+</html> 

@@ -1,0 +1,403 @@
+[
+    {
+        "id": "1",
+        "content": "first post",
+        "author": {
+            "name": "Ivan",
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T12:50:16.780614",
+        "likes": 0,
+        "liked_by": [],
+        "comments": [
+            {
+                "id": "2",
+                "content": "lfg",
+                "author": {
+                    "name": "Ivan",
+                    "email": "icornejo@andrew.cmu.edu",
+                    "profile_picture": "profile_icornejo_20250402_131659.png"
+                },
+                "timestamp": "2025-04-02T12:50:22.483235"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "content": "hello",
+        "author": {
+            "name": "Ivan",
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T12:52:30.479541",
+        "likes": 0,
+        "liked_by": [],
+        "comments": [
+            {
+                "id": "18",
+                "content": "bang",
+                "author": {
+                    "email": "icornejo@andrew.cmu.edu",
+                    "profile_picture": "profile_icornejo_20250402_131659.png"
+                },
+                "timestamp": "2025-04-02T13:13:43.645126"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "content": "hi",
+        "author": {
+            "name": "Ivan",
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T12:52:49.196950",
+        "likes": 0,
+        "liked_by": [],
+        "comments": []
+    },
+    {
+        "id": "4",
+        "content": "hello",
+        "author": {
+            "name": "Ivan",
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T12:53:51.327311",
+        "likes": 0,
+        "liked_by": [],
+        "comments": []
+    },
+    {
+        "id": "5",
+        "content": "hello?",
+        "author": {
+            "name": "Ivan",
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T12:54:10.028402",
+        "likes": 0,
+        "liked_by": [],
+        "comments": []
+    },
+    {
+        "id": "6",
+        "content": "hello",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T12:57:12.195788",
+        "likes": 0,
+        "liked_by": [],
+        "comments": []
+    },
+    {
+        "id": "7",
+        "content": "bruh",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T12:57:20.679192",
+        "likes": 0,
+        "liked_by": [],
+        "comments": []
+    },
+    {
+        "id": "8",
+        "content": "pfp still doesn't work",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T12:57:48.411643",
+        "likes": 0,
+        "liked_by": [],
+        "comments": []
+    },
+    {
+        "id": "9",
+        "content": "hi",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T13:02:08.829376",
+        "likes": 0,
+        "liked_by": [],
+        "comments": []
+    },
+    {
+        "id": "10",
+        "content": "it is still not working",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T13:02:22.343381",
+        "likes": 0,
+        "liked_by": [],
+        "comments": []
+    },
+    {
+        "id": "11",
+        "content": "hello?",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T13:04:28.880512",
+        "likes": 0,
+        "liked_by": [],
+        "comments": []
+    },
+    {
+        "id": "12",
+        "content": "hi",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T13:05:52.028156",
+        "likes": 0,
+        "liked_by": [],
+        "comments": []
+    },
+    {
+        "id": "13",
+        "content": "perfect",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T13:05:56.610158",
+        "likes": 0,
+        "liked_by": [],
+        "comments": []
+    },
+    {
+        "id": "14",
+        "content": "hi",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T13:06:52.874856",
+        "likes": 0,
+        "liked_by": [],
+        "comments": [
+            {
+                "id": "18",
+                "content": "hello?",
+                "author": {
+                    "email": "icornejo@andrew.cmu.edu",
+                    "profile_picture": "profile_icornejo_20250402_131659.png"
+                },
+                "timestamp": "2025-04-02T13:15:04.230900"
+            }
+        ]
+    },
+    {
+        "id": "15",
+        "content": "hi",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T13:08:09.360244",
+        "likes": 0,
+        "liked_by": [],
+        "comments": [
+            {
+                "id": "16",
+                "content": "hi",
+                "author": {
+                    "email": "icornejo@andrew.cmu.edu",
+                    "profile_picture": "profile_icornejo_20250402_131659.png"
+                },
+                "timestamp": "2025-04-02T13:10:36.893562"
+            },
+            {
+                "id": "16",
+                "content": "hello",
+                "author": {
+                    "email": "icornejo@andrew.cmu.edu",
+                    "profile_picture": "profile_icornejo_20250402_131659.png"
+                },
+                "timestamp": "2025-04-02T13:10:42.910585"
+            }
+        ]
+    },
+    {
+        "id": "16",
+        "content": "yo",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T13:11:52.114290",
+        "likes": 0,
+        "liked_by": [],
+        "comments": [
+            {
+                "id": "17",
+                "content": "hey",
+                "author": {
+                    "email": "icornejo@andrew.cmu.edu",
+                    "profile_picture": "profile_icornejo_20250402_131659.png"
+                },
+                "timestamp": "2025-04-02T13:11:55.361165"
+            }
+        ]
+    },
+    {
+        "id": "17",
+        "content": "yoyo",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T13:13:33.893240",
+        "likes": 0,
+        "liked_by": [],
+        "comments": [
+            {
+                "id": "18",
+                "content": "bang",
+                "author": {
+                    "email": "icornejo@andrew.cmu.edu",
+                    "profile_picture": "profile_icornejo_20250402_131659.png"
+                },
+                "timestamp": "2025-04-02T13:13:37.260774"
+            }
+        ]
+    },
+    {
+        "id": "18",
+        "content": "help",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu",
+            "profile_picture": "profile_icornejo_20250402_131659.png"
+        },
+        "timestamp": "2025-04-02T13:16:45.994087",
+        "likes": 0,
+        "liked_by": [],
+        "comments": [
+            {
+                "id": "19",
+                "content": "hi",
+                "author": {
+                    "email": "icornejo@andrew.cmu.edu",
+                    "profile_picture": "profile_icornejo_20250402_131659.png"
+                },
+                "timestamp": "2025-04-02T13:16:49.377345"
+            },
+            {
+                "id": "19",
+                "content": "yo yo",
+                "author": {
+                    "email": "icornejo@andrew.cmu.edu"
+                },
+                "timestamp": "2025-04-02T13:17:52.778407"
+            },
+            {
+                "id": "19",
+                "content": "@ivan",
+                "author": {
+                    "email": "icornejo@andrew.cmu.edu"
+                },
+                "timestamp": "2025-04-02T13:17:57.377967"
+            }
+        ]
+    },
+    {
+        "id": "19",
+        "content": "i like this",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu"
+        },
+        "timestamp": "2025-04-02T13:19:28.493391",
+        "likes": 0,
+        "liked_by": [],
+        "comments": []
+    },
+    {
+        "id": "20",
+        "content": "ye is dumb",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu"
+        },
+        "timestamp": "2025-04-02T13:19:36.542809",
+        "likes": 0,
+        "liked_by": [],
+        "comments": []
+    },
+    {
+        "id": "21",
+        "content": "sumus might launch soon!",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu"
+        },
+        "timestamp": "2025-04-02T13:23:51.154637",
+        "likes": 0,
+        "liked_by": [],
+        "comments": [
+            {
+                "id": "22",
+                "content": "i love this!",
+                "author": {
+                    "email": "icornejo@andrew.cmu.edu"
+                },
+                "timestamp": "2025-04-02T13:23:58.144004"
+            }
+        ],
+        "image": "post_icornejo_20250402_132351.png"
+    },
+    {
+        "id": "22",
+        "content": "hey hey",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu"
+        },
+        "timestamp": "2025-04-02T13:32:40.499771",
+        "likes": 0,
+        "liked_by": [],
+        "comments": [
+            {
+                "id": "23",
+                "content": "lfg",
+                "author": {
+                    "email": "icornejo@andrew.cmu.edu"
+                },
+                "timestamp": "2025-04-02T13:32:48.550536"
+            }
+        ],
+        "image": "post_icornejo_20250402_133240.jpg"
+    },
+    {
+        "id": "23",
+        "content": "lfg",
+        "author": {
+            "email": "icornejo@andrew.cmu.edu"
+        },
+        "timestamp": "2025-04-02T13:35:39.563993",
+        "likes": 0,
+        "liked_by": [],
+        "comments": [
+            {
+                "id": "24",
+                "content": "yo yo",
+                "author": {
+                    "email": "icornejo@andrew.cmu.edu"
+                },
+                "timestamp": "2025-04-02T13:35:43.365871"
+            }
+        ]
+    }
+]

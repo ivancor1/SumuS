@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUMUS - Connect with College Students</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">SUMUS</div>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="{{ url_for('signup') }}" class="cta-button">Sign Up</a></li>
+            <li><a href="{{ url_for('login') }}" class="cta-button login-btn">Login</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Connect with Your College Community</h1>
+            <p>Join SUMUS - The social platform exclusively for college students</p>
+            <a href="{{ url_for('signup') }}" class="cta-button">Get Started</a>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <h2>Why Choose SUMUS?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Connect with Peers</h3>
+                <p>Find and connect with students from your college and others</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-book"></i>
+                <h3>Study Groups</h3>
+                <p>Create and join study groups for better learning</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Campus Events</h3>
+                <p>Stay updated with the latest events on campus</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-comments"></i>
+                <h3>Discussion Forums</h3>
+                <p>Engage in meaningful discussions with your peers</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About SUMUS</h2>
+            <p>SUMUS is a social platform designed specifically for college students. We provide a safe and engaging environment for students to connect, collaborate, and grow together.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">SUMUS</div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2024 SUMUS. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

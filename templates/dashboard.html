@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUMUS - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <nav class="dashboard-nav">
+        <div class="nav-left">
+            <div class="logo"><a href="{{ url_for('dashboard') }}">SUMUS</a></div>
+        </div>
+        <div class="nav-center">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="user-menu">
+                <img src="{{ url_for('static', filename='uploads/' + user.profile_picture) }}" 
+                     alt="User" 
+                     class="user-avatar"
+                     onerror="this.src='{{ url_for('static', filename='uploads/default.jpg') }}'"
+                     id="userMenuAvatar">
+                <span class="user-name">{{ user.fullname }}</span>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('profile') }}"><i class="fas fa-user"></i> Profile</a>
+                    <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
+                    <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="#feed"><i class="fas fa-home"></i> Feed</a>
+                </li>
+                <li>
+                    <a href="#messages"><i class="fas fa-envelope"></i> Messages</a>
+                </li>
+                <li>
+                    <a href="#groups"><i class="fas fa-users"></i> Study Groups</a>
+                </li>
+                <li>
+                    <a href="#events"><i class="fas fa-calendar"></i> Events</a>
+                </li>
+                <li>
+                    <a href="#forums"><i class="fas fa-comments"></i> Forums</a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="create-post">
+                <form enctype="multipart/form-data">
+                    <textarea placeholder="What's on your mind?"></textarea>
+                    <div class="post-actions">
+                        <label for="post-image" class="attach-btn">
+                            <i class="fas fa-image"></i> Photo
+                            <input type="file" id="post-image" accept="image/*" style="display: none;">
+                        </label>
+                        <div class="image-preview" style="display: none;">
+                            <img src="" alt="Preview">
+                            <button type="button" class="remove-image"><i class="fas fa-times"></i></button>
+                        </div>
+                        <button type="submit" class="post-btn">Post</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="feed">
+                {% for post in posts %}
+                <div class="post" data-post-id="{{ post.id }}">
+                    <div class="post-header">
+                        {% set author = users|selectattr('email', 'equalto', post.author.email)|first %}
+                        <img src="{{ url_for('static', filename='uploads/' + (author.profile_picture or 'default.jpg')) }}" 
+                             alt="User" 
+                             class="user-avatar"
+                             onerror="this.src='{{ url_for('static', filename='uploads/default.jpg') }}'">
+                        <div class="post-info">
+                            <h4>{{ author.fullname }}</h4>
+                            <span>{{ post.timestamp }}</span>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>{{ post.content }}</p>
+                        {% if post.image %}
+                        <div class="post-image">
+                            <img src="{{ url_for('static', filename='uploads/' + post.image) }}" alt="Post image">
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="post-actions">
+                        <button class="like-btn {% if user.email in post.liked_by %}liked{% endif %}" data-likes="{{ post.likes }}">
+                            <i class="fas fa-thumbs-up"></i> Like <span class="like-count">{{ post.likes }}</span>
+                        </button>
+                        <button class="comment-btn">
+                            <i class="fas fa-comment"></i> Comment
+                            {% if post.comments and post.comments|length > 0 %}
+                                <span class="comment-count">({{ post.comments|length }})</span>
+                            {% endif %}
+                        </button>
+                        <button><i class="fas fa-share"></i> Share</button>
+                    </div>
+                    <div class="comments-section" style="display: none;">
+                        <form class="comment-form">
+                            <input type="text" placeholder="Write a comment..." required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                        <div class="comments-container">
+                            {% if post.comments %}
+                                {% for comment in post.comments %}
+                                <div class="comment">
+                                    <div class="comment-header">
+                                        {% set comment_author = users|selectattr('email', 'equalto', comment.author.email)|first %}
+                                        <img src="{{ url_for('static', filename='uploads/' + (comment_author.profile_picture or 'default.jpg')) }}" 
+                                             alt="User" 
+                                             class="user-avatar"
+                                             onerror="this.src='{{ url_for('static', filename='uploads/default.jpg') }}'">
+                                        <div class="comment-info">
+                                            <h5>{{ comment_author.fullname }}</h5>
+                                            <span>{{ comment.timestamp }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="comment-content">
+                                        <p>{{ comment.content }}</p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </main>
+
+        <aside class="right-sidebar">
+            <div class="upcoming-events">
+                <h3>Upcoming Events</h3>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Apr</span>
+                    </div>
+                    <div class="event-details">
+                        <h4>Campus Career Fair</h4>
+                        <p>Main Hall • 10:00 AM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="study-groups">
+                <h3>Your Study Groups</h3>
+                <ul>
+                    <li>
+                        <span class="group-name">Calculus Study Group</span>
+                        <span class="member-count">12 members</span>
+                    </li>
+                    <li>
+                        <span class="group-name">Physics Lab Team</span>
+                        <span class="member-count">8 members</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html> 

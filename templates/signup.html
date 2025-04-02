@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SUMUS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="{{ url_for('home') }}">SUMUS</a></div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}#features">Features</a></li>
+            <li><a href="{{ url_for('home') }}#about">About</a></li>
+            <li><a href="{{ url_for('home') }}#contact">Contact</a></li>
+            <li><a href="{{ url_for('signup') }}" class="cta-button">Sign Up</a></li>
+            <li><a href="{{ url_for('login') }}" class="cta-button login-btn">Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="signup-section">
+        <div class="signup-container">
+            <h2>Create Your Account</h2>
+            <form class="signup-form" id="signupForm" method="POST" action="/signup">
+                <div class="form-group">
+                    <input type="text" name="fullname" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="College Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                </div>
+                <div class="form-group">
+                    <select name="college" required>
+                        <option value="" disabled selected>Select Your College</option>
+                        <option value="college1">College 1</option>
+                        <option value="college2">College 2</option>
+                        <option value="college3">College 3</option>
+                    </select>
+                </div>
+                <div class="error-message" id="errorMessage"></div>
+                <button type="submit" class="cta-button">Create Account</button>
+            </form>
+            <p class="login-link">Already have an account? <a href="{{ url_for('login') }}">Log In</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">SUMUS</div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2024 SUMUS. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/signup.js') }}"></script>
+</body>
+</html> 
